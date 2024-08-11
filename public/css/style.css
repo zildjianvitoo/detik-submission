@@ -1,0 +1,755 @@
+:root {
+    --primary-blue: #00d1ff;
+    --secondary-yellow: #ffc73c;
+}
+
+.bg-blue {
+    background-color: var(--primary-blue);
+}
+
+.bg-yellow {
+    background-color: var(--secondary-yellow);
+}
+
+.text-yellow {
+    color: #ffe03c;
+}
+
+.text-orange {
+    color: #f79820;
+}
+
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.27);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(9.5px);
+    -webkit-backdrop-filter: blur(9.5px);
+    border: 1px solid rgba(255, 255, 255, 0.02);
+}
+
+body,
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* BUTTON */
+.navbar-nav button,
+#cover button,
+#about button {
+    box-shadow: 0 18px 40px 12px rgb(255, 211, 103, 0.35);
+}
+
+.navbar-nav button:hover,
+#cover button:hover,
+#about button:hover {
+    background-color: #ff9a3c;
+    box-shadow: 0 18px 40px 12px rgb(255, 154, 60, 0.25);
+}
+
+/* HEADER and NAVBAR */
+
+header {
+    padding: 16px 48px 16px 48px;
+}
+
+header nav {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+nav > div > button > span {
+    width: 50%;
+}
+
+.navbar {
+    border-radius: 50px;
+    overflow: hidden;
+    padding: 0 15px;
+}
+.navbar-toggler {
+    border: none;
+    background-color: var(--secondary-yellow);
+    padding: 5px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler .navbar-toggler-icon {
+    display: none;
+}
+.navbar-toggler.collapsed .bi-list {
+    display: inline;
+    color: white;
+}
+.navbar-toggler:not(.collapsed) .bi-x {
+    display: inline;
+    color: white;
+}
+.navbar-toggler .bi-list,
+.navbar-toggler .bi-x {
+    font-size: 1.5rem;
+    display: none;
+}
+
+.nav-link {
+    color: #212427;
+}
+
+.navbar-nav .nav-item {
+    height: 40px;
+}
+
+.navbar-nav .nav-item:hover {
+    background: rgba(255, 255, 255, 0.46);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10.3px);
+    -webkit-backdrop-filter: blur(10.3px);
+    border: 1px solid rgba(255, 255, 255, 1);
+}
+
+/*** HOME PAGE ***/
+
+/* COVER */
+
+#cover {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+#cover::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: var(--primary-blue);
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 209, 255, 0) 40%,
+        var(--primary-blue)
+    );
+    z-index: 1;
+}
+
+#cover .thailand-explore {
+    width: 600px;
+}
+
+#cover button {
+    width: fit-content;
+}
+
+.swiper-wrapper {
+    width: 70%;
+    margin-left: 12rem;
+    display: flex;
+    gap: 2rem;
+    height: 100%;
+}
+
+.swiper-slide {
+    cursor: pointer;
+    text-align: center;
+    width: 225px !important;
+    height: 340px !important;
+}
+
+.swiper-slide img {
+    width: 225px;
+    height: 340px;
+    object-fit: cover;
+    border-radius: 32px;
+    -webkit-border-radius: 32px;
+    -moz-border-radius: 32px;
+    -ms-border-radius: 32px;
+    -o-border-radius: 32px;
+}
+
+/* ABOUT */
+
+#about {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#about .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 209, 255, 1),
+        rgba(0, 209, 255, 0.9),
+        rgba(0, 209, 255, 1)
+    );
+    z-index: 1;
+}
+
+.about-program-description {
+    width: 80%;
+}
+
+#about .dashed-vertical-line {
+    width: 1px;
+    transform: rotate(90);
+    height: 90px;
+    border: none;
+    border-left: 1px dashed white;
+    -webkit-transform: rotate(90);
+    -moz-transform: rotate(90);
+    -ms-transform: rotate(90);
+    -o-transform: rotate(90);
+}
+
+.outer-circle {
+    width: 28px;
+    height: 28px;
+    display: grid;
+    place-items: center;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 1px solid white;
+}
+
+.inner-circle {
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* AGGREGATOR */
+
+#aggregator {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+#aggregator .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(255, 255, 255, 0.9),
+        rgba(255, 255, 255, 0.9)
+    );
+    z-index: 1;
+}
+
+#aggregator .artikel-1 {
+    width: fit-content !important;
+}
+
+#aggregator .artikel-1 figure {
+    overflow: hidden;
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+
+#aggregator .artikel-1 img {
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+}
+#aggregator .artikel-1 .title h2 {
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+}
+
+#aggregator .artikel-1:hover img {
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+#aggregator .artikel-1:hover .title h2 {
+    color: #ffe03c;
+}
+
+#aggregator .artikel-1 .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 209, 255, 0) 90%,
+        var(--primary-blue)
+    );
+    z-index: 1;
+}
+
+#aggregator .artikel-1 .title {
+    width: fit-content;
+    color: white;
+
+    margin-top: -1.25rem;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
+#aggregator .artikel-1 .title p {
+    width: 50%;
+}
+
+.another-artikel,
+.artikel-1 {
+    cursor: pointer;
+}
+
+.another-artikel figure {
+    overflow: hidden;
+    border-radius: 16px;
+    border-radius: 16px;
+}
+
+#aggregator .another-artikel figure {
+    border-top-right-radius: 16px;
+    border-top-left-radius: 16px;
+}
+
+#aggregator .another-artikel img {
+    width: 100%;
+    object-fit: cover;
+    background-size: cover;
+
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+}
+#aggregator .another-artikel.title h2 {
+    transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out;
+}
+
+#aggregator .another-artikel:hover img {
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+#aggregator .another-artikel:hover h5 {
+    color: var(--primary-blue);
+}
+
+.button-another-news {
+    background-color: var(--primary-blue);
+    border: none;
+
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+.button-another-news:hover {
+    background-color: #ffc73c;
+}
+
+/*** REGISTRATION PAGE ***/
+
+/* REGISTRATION */
+
+#registration {
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+}
+
+#registration .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--primary-blue), transparent);
+    z-index: 1;
+}
+
+#registration .form-registration {
+    margin-top: 1rem;
+    width: 50%;
+    border-radius: 16px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    -ms-border-radius: 16px;
+    -o-border-radius: 16px;
+}
+
+#registration .form-registration input,
+#registration .form-registration textarea {
+    border: none;
+    background-color: #f8f8f8;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+.input-group {
+    position: relative;
+}
+
+.input-group .placeholder-container {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #071424;
+}
+
+.input-group .placeholder-container-textarea {
+    position: absolute;
+    top: 15%;
+    left: 12px;
+    transform: translateY(-15%);
+    pointer-events: none;
+    color: #071424;
+    -webkit-transform: translateY(-15%);
+    -moz-transform: translateY(-15%);
+    -ms-transform: translateY(-15%);
+    -o-transform: translateY(-15%);
+}
+
+.red-asterisk {
+    color: red;
+}
+
+.no-only {
+    color: #828282;
+    margin-top: -10px;
+    color: #828282;
+
+    bottom: -20px;
+    left: 0;
+    font-size: 10px;
+}
+
+.file-upload {
+    display: flex;
+    border: 2px dashed #ccc;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+}
+
+.file-upload .upload-area {
+    flex: 1;
+    text-align: center;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    height: 300px;
+    display: flex;
+    width: 200px !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.file-upload .upload-area input[type="file"] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.file-upload .upload-area .upload-icon {
+    color: var(--primary-blue);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin: 0 auto;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+.file-upload .upload-area p {
+    margin: 0;
+    color: black;
+}
+
+.file-upload .upload-area .red-asterisk {
+    color: red;
+}
+
+.file-upload .upload-info {
+    padding-left: 20px;
+}
+
+.file-upload .upload-info p {
+    margin: 0;
+    color: black;
+}
+
+.form-check {
+    color: black;
+    font-size: 14px;
+}
+
+.form-check span {
+    color: var(--primary-blue);
+}
+
+.button-registration {
+    border: none;
+    color: white;
+    background: var(--primary-blue);
+    font-weight: bold;
+    width: 50%;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+/* FOOTER */
+
+footer .description {
+    width: 75%;
+}
+
+footer .connect-with-us {
+    font-size: 12px;
+}
+
+footer .connect-with-us {
+    text-align: right;
+    margin-left: auto;
+}
+
+footer .hr {
+    width: 100%;
+    border-top: 1px solid white;
+}
+
+@media only screen and (max-width: 992px) {
+    header {
+        padding: 8px 16px 8px 16px;
+    }
+
+    header nav {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .thailand-explore-wrapper {
+        margin-top: 16rem;
+    }
+
+    #cover .thailand-explore {
+        width: 400px;
+    }
+
+    .swiper-wrapper {
+        margin-left: 0;
+        display: flex;
+        gap: 0;
+    }
+
+    .swiper-slide {
+        cursor: pointer;
+        text-align: center;
+        width: 160px !important;
+        height: 200px !important;
+        border-radius: 16px;
+    }
+
+    .swiper-slide img {
+        width: 160px;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .thailand-explore-wrapper {
+        margin-top: 12rem;
+    }
+
+    .swiper-slide {
+        cursor: pointer;
+        text-align: center;
+        width: 120px !important;
+        height: 150px !important;
+        border-radius: 16px;
+    }
+
+    .swiper-slide img {
+        width: 120px;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+    }
+
+    #registration .form-registration {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    #cover .thailand-explore {
+        width: 300px;
+    }
+
+    .swiper-slide {
+        cursor: pointer;
+        text-align: center;
+        width: 80px !important;
+        height: 130px !important;
+        border-radius: 16px;
+    }
+
+    .swiper-slide img {
+        width: 80px;
+        height: 130px;
+        object-fit: cover;
+        border-radius: 16px;
+        -webkit-border-radius: 16px;
+        -moz-border-radius: 16px;
+        -ms-border-radius: 16px;
+        -o-border-radius: 16px;
+    }
+
+    #about .content {
+        padding-top: 5rem;
+
+        padding-bottom: 5rem;
+    }
+
+    #about .about-image {
+        width: 70%;
+    }
+
+    #about .about-program-description {
+        width: 100%;
+    }
+
+    #aggregator {
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+    }
+
+    #aggregator figure {
+        overflow: auto;
+    }
+
+    .button-another-news {
+        margin: 0 auto;
+        width: 80%;
+        padding-top: 0.5rem !important;
+        padding-bottom: 0.5rem !important;
+    }
+
+    #aggregator h2,
+    h4,
+    h5 {
+        font-size: large;
+    }
+
+    .file-upload .upload-info {
+        flex: 0;
+        font-size: 12px;
+    }
+
+    footer > figure {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    footer .description {
+        width: 100%;
+    }
+
+    footer .connect-with-us {
+        margin: 0 auto;
+        padding-bottom: 0.5rem;
+    }
+}
