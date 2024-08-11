@@ -9,6 +9,7 @@
       <p>Lengkapi data diri kamu dengan benar</p>
       <div class="mt-2  form-registration p-4  bg-white">
         <form class="d-flex flex-column ">
+          @csrf
           <div class="input-group mb-3">
             <input type="text" class="form-control py-3" id="name-input" aria-label="Nama Lengkap"
               aria-describedby="basic-addon1">
