@@ -6,14 +6,11 @@
     },
     "routes": [
         {
+            "src": "/(css|js)/(.*)$",
+            "dest": "/api/assets.php?type=$1&file=$2"
+        },
+        {
             "src": "/(.*)",
-            "dest": "/api/index.php"
-        },
-        {
-            "handle": "filesystem"
-        },
-        {
-            "src": "/.*",
             "dest": "/api/index.php"
         }
     ],
