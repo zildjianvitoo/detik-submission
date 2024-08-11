@@ -7,7 +7,7 @@
       class="min-vh-100 h-full d-flex flex-column z-2 justify-content-center align-items-center position-relative px-4 px-lg-5 content text-white">
       <h1 class="fw-bold">Registrasi</h1>
       <p>Lengkapi data diri kamu dengan benar</p>
-      <div class="mt-2  form-registration p-4  bg-white">
+      <div class="mt-2  form-registration p-4 bg-white">
         <form class="d-flex flex-column ">
           @csrf
           <div class="input-group mb-3">
